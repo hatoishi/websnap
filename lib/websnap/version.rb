@@ -1,0 +1,3 @@
+class WebSnap
+  VERSION = "0.1.4"
+end
