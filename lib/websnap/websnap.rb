@@ -12,6 +12,10 @@ class WebSnap
     end
   end
 
+  class << self
+    attr_accessor :root_url
+  end
+
   attr_accessor :source, :stylesheets
   attr_reader :options
 
