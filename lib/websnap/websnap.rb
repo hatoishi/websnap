@@ -83,7 +83,7 @@ class WebSnap
   protected
 
   def wkhtmltoimage
-    @wkhtmltoimage ||= `which wkhtmltoimage`.chomp
+    @wkhtmltoimage ||= (defined?(Bundler::GemfileError) ? `bundle exec which wkhtmltoimage-proxy` : `which wkhtmltoimage-proxy`).chomp
   end
 
   def normalize_options(options)
