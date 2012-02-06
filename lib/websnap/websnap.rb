@@ -2,7 +2,7 @@ class WebSnap
 
   class NoExecutableError < StandardError
     def initialize
-      super('Could not locate wkhtmltoimage executable')
+      super('Could not locate wkhtmltoimage(-proxy) executable')
     end
   end
 
