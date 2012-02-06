@@ -2,7 +2,7 @@ class WebSnap
 
   class NoExecutableError < StandardError
     def initialize
-      super('Could not locate wkhtmltoimage-proxy executable')
+      super('Could not locate wkhtmltoimage executable')
     end
   end
 
@@ -83,7 +83,7 @@ class WebSnap
   protected
 
   def wkhtmltoimage
-    @wkhtmltoimage ||= `which wkhtmltoimage-proxy`.chomp
+    @wkhtmltoimage ||= `which wkhtmltoimage`.chomp
   end
 
   def normalize_options(options)
@@ -112,3 +112,4 @@ class WebSnap
   end
 
 end
+
